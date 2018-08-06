@@ -6,6 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import {App} from './App';
 import { initialState } from './reducers/';
 
+
 configure({adapter: new Adapter()});
 
 it('renders without crashing', () => {
@@ -14,6 +15,7 @@ it('renders without crashing', () => {
   const component = shallow(<App
                               state = {initialState}
                               submitTodo = {mockFunction}
+                              todos = {[]}
                                />,
                               );
 

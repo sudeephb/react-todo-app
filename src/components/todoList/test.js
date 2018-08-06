@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { shallow,configure } from 'enzyme';
-import TodoList from '.';
+import TodoList from '.'; 
+import Adapter from 'enzyme-adapter-react-16';
+
 
 configure({adapter: new Adapter() });
 
@@ -14,7 +16,7 @@ describe('TodoList component', () => {
         },
     ];
 
-    const component = shallow(<TdodList todos = {todos} />);
+    const component = shallow(<TodoList todos = {todos} />);
 
     it('Should render successfully', () => {
         expect(component.exists()).toEqual(true);

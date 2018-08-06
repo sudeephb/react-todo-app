@@ -15,7 +15,7 @@ const TodoList = ({ todos }) => {
     );
 };
 
-TodoList.PropTypes = {
+TodoList.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.shape(
         {
             id: PropTypes.number.isRequired,
